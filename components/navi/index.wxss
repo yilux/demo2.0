@@ -1,0 +1,4 @@
+.container-navi{display: inline-flex;flex-direction: row;align-items: center;width: 600rpx;height: 80rpx;justify-content: space-between;
+background: #f7f7f7;border-radius: 2rpx}
+.icon{width: 80rpx;height: 80rpx}
+.content{font-size: 33rpx}

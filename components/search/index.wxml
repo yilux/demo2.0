@@ -1,0 +1,46 @@
+<view class="container">
+  <view class='header'>
+    <view class='search-container'>
+      <image class='icon' src='images/search.png' />
+      <!-- auto-focus='true'激活光标 -->
+      <input value='{{q}}' bind:confirm='onConfirm' placeholder-class="in-bar" placeholder="搜索图书名称" class='bar' auto-focus='true' />
+      <image class="cancel-img" src='images/cancel.png' bind:tap="onDelete"/>
+    </view> 
+    <view bind:tap="onCancel" class='cancel'>取消</view>
+  </view>
+
+  <view wx:if="{{!searching}}">
+    <view class='history'>
+      <view class='title'>
+        <view class='chunk'></view>
+        <text>历史搜索</text>
+      </view>
+      <view class='tags'>
+        <block wx:for="{{historyWords}}" wx:key="id">
+          <v-tag text="{{item}}" bind:tapping="onConfirm"/>
+        </block>
+      </view>
+    </view>
+    <view class='history hot-search'>
+      <view class='title'>
+        <view class='chunk'></view>
+        <text>热门搜索</text>
+      </view>
+      <view class='tags'>
+        <block wx:for="{{hotWords}}" wx:key="id">
+          <v-tag text="{{item}}" bind:tapping="onConfirm"/>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class='container-book' wx:if="{{searching}}">
+    <block wx:for="{{dataArray}}" wx:key="{{item.id}}">
+      <v-book book="{{item}}" showLike="{{false}}" class="book" />
+    </block>
+  </view>
+  <!-- 初始化加载页面的loading -->
+  <v-loading wx:if="{{loadingCenter}}" class="loading-center"/>
+  <!-- 加载页面更多的时候出现的loading -->
+  <v-loading wx:if="{{loading}}" class="loading"/>
+  <text wx:if="{{noneResult}}" class='empty-tip'>没有搜索到书籍</text>
+</view>

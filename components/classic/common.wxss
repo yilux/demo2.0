@@ -1,0 +1,5 @@
+/* 样式的复用 */
+.container-classic{display: flex;flex-direction: column;align-items: center;}
+.classic-img{width:750rpx}
+.tag{width: 46rpx;height: 142rpx;position: relative;z-index: 9;bottom: 58rpx;left: -320rpx}
+.container-classic text{font-size: 36rpx;max-width: 550rpx}

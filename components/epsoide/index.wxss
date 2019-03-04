@@ -1,0 +1,7 @@
+.container-epsoide{display: flex;flex-direction: row;font-size: 24rpx}
+.index-container{display: flex;flex-direction: row;align-items: baseline}
+.number{font-size: 32rpx}
+.index{font-size: 60rpx;line-height:60rpx;margin-right: 14rpx}
+.line{border-left: 1px solid black;height: 44rpx;margin-right: 14rpx}
+.date-container{display: flex;flex-direction: column}
+.month{line-height: 24rpx}

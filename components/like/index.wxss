@@ -1,0 +1,3 @@
+.container-like{display: inline-flex;padding: 20rpx 0;flex-direction: row;width: 90rpx;border: 1px solid red}
+.container-like image{width: 32rpx;height: 28rpx;}
+.container-like text{position: relative;bottom: 10px;font-size: 24rpx;line-height: 24rpx}

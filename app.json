@@ -1,5 +1,20 @@
 {
   "pages":[
+    "pages/my/index",
+    "pages/book/index",
+    "components/search/index",
+    "components/loading/index",
+    "pages/book-detail/book-detail",
+    "pages/classic/index",
+    "components/classic/movie/index",
+    "components/classic/music/index",
+    "components/classic/eassy/index",
+    "components/like/index",
+    "components/navi/index",
+    "components/epsoide/index",
+    "components/book/index",
+    "components/tag/index",
+    "components/mask/index",
     "pages/index/index",
     "pages/logs/logs"
   ],
@@ -8,5 +23,29 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "selectedColor":"#f07",
+    "backgroundColor":"#fff",
+    "color":"#000",
+    "list":[
+      {
+        "selectedIconPath":"/images/tab/classic@highlight.png",
+        "pagePath":"pages/classic/index",
+        "text":"流行",
+        "iconPath":"/images/tab/classic.png"
+      },
+      {
+        "selectedIconPath": "/images/tab/book@highlight.png",
+        "pagePath": "pages/book/index",
+        "text": "书籍",
+        "iconPath": "/images/tab/book.png"
+      },{
+        "selectedIconPath": "/images/tab/my@highlight.png",
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "iconPath": "/images/tab/my.png"
+      }
+    ]
   }
 }

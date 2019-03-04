@@ -1,0 +1,25 @@
+<view class="container">
+  <view class='header'>
+    <v-epsoide index="{{classicData.index}}"class="epsoide"/>
+    <v-like like="{{likeStaus}}" content="{{likeCount}}" bind:like="onLike" class="like"/>
+  </view>
+  <!-- type:100电影，200音乐，300句子 -->
+  <v-movie 
+    hidden="{{classicData.type!=100}}" 
+    img="{{classicData.image}}" 
+    content="{{classicData.content}}" 
+  />
+  <v-music 
+    wx:if="{{classicData.type==200}}" 
+    img="{{classicData.image}}" 
+    content="{{classicData.content}}" 
+    src="{{classicData.url}}"
+  />
+  <v-eassy 
+    hidden="{{classicData.type!=300}}" 
+    img="{{classicData.image}}" 
+    content="{{classicData.content}}" 
+  />
+  <v-navi bind:left="onNext" bind:right="onPrevious" title="{{classicData.title}}" first="{{first}}" last="{{last}}" class="navi"
+  />
+</view>

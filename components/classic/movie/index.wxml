@@ -1,0 +1,5 @@
+<view class="container-classic" hidden="{{hidden}}">
+  <image src="{{img}}" class='classic-img'></image>
+  <image src="image/movie.png" class='tag'></image>
+  <text>{{content}}</text>
+</view>

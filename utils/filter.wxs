@@ -1,0 +1,16 @@
+var format = function(text){
+  if(!text){
+    return
+  }
+    var reg = getRegExp('\\\\n','g')
+  return text.replace(reg,'\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
+}
+var limit = function(array,length){
+  // slice() 方法可从已有的数组中返回选定的元素。
+  return array.slice(0,length)
+}
+// 模块
+module.exports = {
+  format:format,
+  limit:limit
+}
